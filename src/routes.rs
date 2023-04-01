@@ -1,4 +1,8 @@
+use yew::prelude::*;
 use yew_router::prelude::*;
+
+use crate::pages::{self, SignUp};
+use pages::Home as Home;
 
 #[derive(Clone, Routable, PartialEq)]
 enum Route {
@@ -12,13 +16,11 @@ enum Route {
     SignUp
 }
 
-//TODO: Make function components for Home page, About, Resume, and SignUp
-
 fn switch(routes: Route) -> Html {
     match routes {
-        Route::Home => ,
-        Route::About => ,
-        Route::Resume => ,
-        Route::SignUp => ,
+        Route::Home => pages::Home(),
+        Route::About => pages::About(),
+        Route::Resume => pages::Resume(),
+        Route::SignUp => pages::SignUp(),
     }
 }
