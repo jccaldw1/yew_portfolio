@@ -1,5 +1,4 @@
 use yew::prelude::*;
-pub mod navbar;
 
 #[derive(Properties, PartialEq, Clone)]
 pub struct navbar_page {
@@ -23,5 +22,6 @@ pub fn NavBar(props: &navbar_props) -> Html {
                     {page.page_name.to_string()}
                 </a>
             }
-        }).collect();
+        })
+        .collect();
 }

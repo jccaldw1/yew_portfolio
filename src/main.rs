@@ -12,7 +12,7 @@ mod pages;
 fn App() -> Html {
     let navbar_page0 = navbar_page {
         page_name: "Home".to_string(),
-        page_link: "/home".to_string()
+        page_link: "/".to_string()
     };
 
     let navbar_page1 = navbar_page {
@@ -24,7 +24,7 @@ fn App() -> Html {
         <>
             <NavBar pages={vec![navbar_page0, navbar_page1]}/>
             <BrowserRouter>
-                <Switch<Route> render={switch}/>
+                <Switch<routes::Route> render={routes::switch}/>
             </BrowserRouter>
         </>
     }
